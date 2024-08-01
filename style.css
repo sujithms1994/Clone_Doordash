@@ -1,0 +1,1535 @@
+/* variables */
+:root{
+    --base-color-white:white;
+    --usage-color-text-subdued-default:black;
+    --usage-color-action-primary-default:red;
+    --color-main-footer-small:#dbdada;
+    --main-footer-bg-color:#191919ff;
+    --usage-space-xx-small:4px;
+    --usage-space-x-large:32px;
+    --usage-space-small:12px;
+    --usage-space-x-small:8px;
+}
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+/* fonts */
+@font-face {
+    font-family: 'myFont1';
+    src: url('fonts/KFOlCnqEu92Fr1MmEU9fBBc4.woff2');
+}
+@font-face {
+    font-family: 'myFont2';
+    src: url('fonts/KFOmCnqEu92Fr1Mu4mxK.woff2');
+}
+@font-face {
+    font-family: 'myFont3';
+    src: url('fonts/TTNorms-Bold.woff2');
+}
+@font-face {
+    font-family: 'myFont4';
+    src: url('fonts/TTNorms-Medium.woff2');
+}
+@font-face {
+    font-family: 'myFont5';
+    src: url('fonts/TTNorms-ExtraBold.woff2');
+}
+@font-face {
+    font-family: 'myFont6';
+    src: url('fonts/TTNorms-Regular.woff2');
+}
+.banner{
+    background-image: url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/hero_v3/hero_desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    z-index: 1;
+    width: 100%;
+}
+.header-flow-cover{
+    /* this is not responsive */
+    display: none;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/hero_v3/hero_desktop.png");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 243px;
+}
+header.flow{
+    /* display: flex; */
+    display: none;
+    /* z-index: 2; */
+    padding: 12px;
+}
+header.flow{
+    width: 100%;
+    position: sticky;
+    top:0;
+    left: 0;
+    justify-content: space-between;
+    background-color:rgb(253, 253, 253);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+header.flow2{
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    max-width: 100%;
+    position: fixed;
+    /* position: sticky; */
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    animation: 300ms ease-in-out 0s 1 normal none running VKzqr;
+    background-color: rgb(255, 255, 255);
+    padding: 36px 48px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+header.flow2 .button-group2{
+    display: flex;
+    width: 94.5%;
+    white-space: nowrap;
+    padding-right: 5.5%;
+    /* z-index: 6; */
+    position: absolute;
+    justify-content: flex-end; 
+    gap: 10px;
+}
+header.flow2 .svgs2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    z-index: 7;
+    margin: 20px auto;
+    position: absolute;
+}
+header.flow2 .svgs2 svg{
+    height: 20px;
+}
+@keyframes VKzqr {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+header.static{
+    display: flex;
+    /* display: none; */
+    margin-top: 6px;
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+}
+header.static .button-group-inplace{
+    display: none;
+    /* display: flex; */
+    justify-content: flex-end;
+    gap: 10px;
+}
+header.static .button-group{
+    display: flex;
+}
+header.static .button-group, header.static .button-group{
+    width: 98.7%;
+    white-space: nowrap;
+    padding-right: 1.3%;
+    z-index: 6;
+    position: absolute;
+    justify-content: flex-end; 
+    gap: 10px;
+}
+header.flow .button-group{
+    width: 12%;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+header.static .button-group-inplace{
+    width: 98%;
+    padding-right: 2%;
+}
+header.static .svgs{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    z-index: 7;
+    margin: 18px auto;
+    justify-content: center;
+    position: absolute;
+}
+header.static .button-group button, header.flow .button-group button{
+    font-family: myFont3;
+    padding: 10px 12px;
+    margin-top:10px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+    font-weight: 700;
+}
+header.flow2 .button-group2 button{
+    font-family: TT Norms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 10px 10px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+    font-weight: 700;
+}
+header.static .button-group-inplace button{
+    font-family: TT Norms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 6px 12px;
+    margin-top:10px;
+    border-radius: 25px;
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+}
+header.static .button-group button:hover, header.static .button-group-inplace button:hover, header.flow .button-group button:hover{
+    cursor: pointer;
+}
+header.static .button-group #sign-in, header.flow .button-group #sign-in, header.flow2 .button-group2 #sign-in{
+    background-color: #e40d0d;
+    color: white;
+}
+header.static .button-group #sign-up, header.flow .button-group #sign-up, header.flow2 .button-group2 #sign-up{
+    background-color: white;
+    color: #606060ff;
+}
+header.static .button-group-inplace #open-app{
+    background-color: #e40d0d;
+    color: white;
+    padding: 0 18px;
+}
+header.static .button-group-inplace #log-in{
+    background-color: white;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-top: 277px;
+}
+.input-container{
+    display: flex;
+    background-color:rgb(255, 255, 255);
+    gap: 10px;
+    align-items: center;
+    border-radius: 30px;
+    padding: 8px 6px 8px 20px ;
+    width: 384px;
+    margin-top: 24px;
+}
+/* not proper,need to check */
+.input-container:focus{
+    border: 1px solid blue;
+}
+.input-container input:focus{
+    border: 1px solid rgb(210, 210, 214);
+}
+/* until here */
+.input-container .location-logo{
+    align-self: center;
+    height: 30px;
+}
+.input-container .search-logo{
+    display: none;
+}
+.input-container button{
+    border-radius: 999px;
+    border: none;
+    color: white;
+    background-color:#eb1700ff;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.banner-content h1{
+    font-family: myFont3;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    white-space: nowrap;
+}
+.banner-content .address{
+    margin-top: 16px;
+    /* display: none; */
+}
+.banner-content .address span, .banner-content .address2-inplace span{
+    color: #191919ff;
+    font-family: myFont3;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    display: block;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.banner-content .address2-inplace{
+    margin-top: 20px;
+    display: none;
+}
+.input-container input{
+    display: flex;
+    flex: 1 1 100%;
+    font-family: myFont4;
+    border: none;
+    text-align: left;
+    width: 302px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    font-weight: 500;
+    outline: none;
+    appearance: none;
+    padding-left: 4px;
+    color: #161616;
+}
+.banner-content .address span, .banner-content .address2-inplace span{
+    padding: 0 4px;
+}
+.banner-content .address button, .banner-content .address2-inplace button{
+    padding: 6px 8px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    border: none; 
+}
+/* app-download */
+.app-download-container{
+    width: 100%;
+    display: none;
+}
+.app-download{
+    display: flex;
+    width: 320px;
+    height: 110px;
+    margin: 30px auto;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 16px;
+
+    border: 1px solid rgb(231, 231, 231);
+    background-color: rgb(247, 247, 247);
+}
+.app-download .right{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+.app-download .right button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 18px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(235, 23, 0);
+    box-shadow: transparent 0px 0px 0px 1px inset;
+    color: rgb(255, 255, 255);
+    padding: 5px 3px;
+    width: 130px;
+    font-size: 13px;
+    gap: 5px;
+}
+.app-download .right button.get-app span{
+    font-family: myFont4;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-align: center;
+}
+.app-download .right button svg{
+    align-self: center;
+}
+
+.app-download .name{
+    font-size: 18px;
+    font-family: myFont3;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.01px;
+    text-transform: none;
+    color: #191919ff;
+    margin: 3px 0;
+}
+.app-download .info{
+    font-family: myFont4;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #606060ff;
+}
+
+/* services */
+
+.services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5.5% 21% ;
+    gap: 10.5%;
+    /* gap: 100px; */
+    flex-wrap: nowrap;
+    padding-bottom: 2%;
+}
+.services div.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+}
+.services div.content .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.services .image{
+   text-align: center;
+}
+.services div h2{
+    font-family: myFont3;
+    font-size: 32px;
+    margin-bottom: 10px;
+
+    color: #191919ff;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    display: block;
+}
+.services div p{
+    margin-bottom: 10px;
+    font-family: myFont4;
+    color: #191919ff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    display: block;
+}
+.services .last-img{
+    height: 160px;
+}
+.services img{
+    margin-bottom: 5px;
+}
+.services div span{
+    font-family: myFont3;
+    color: #eb1700ff;
+    font-size: 18px;
+    margin-right: 5px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+}
+/* everything and dashpass flex */
+.flex-container1 .everything, .flex-container1 .dashpass{
+    display: flex;
+    gap: 60px;
+    margin: 1% auto;
+    justify-content: center;
+    width: 100%;
+}
+.flex-container1 .image-container{
+    max-width: 60%;
+    overflow-x: hidden;
+}
+.flex-container1 .image-container img{
+    width: 700px;
+}
+.flex-container1 .content{
+    width: 22%;
+    align-self: center;
+}
+
+
+.flex-container1 .content h1, .oppertunities .content h1, .covenience-stores .content h1, .get-grocery .content h1{
+    font-family: myFont3;
+    font-size: 40px;
+    font-weight: 700;
+    max-width: 90%;
+    margin-bottom: 20px;
+    color: #191919ff;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+}
+.flex-container1 .content h4, .get-grocery .content h4{
+    font-family: myFont3;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #191919ff;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+}
+.flex-container1 .content p, .oppertunities .content p, .covenience-stores .content p, .get-grocery .content p{
+    font-family: myFont4;
+    font-size: 16px;
+    margin-bottom: 35px;
+    color: #191919ff;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+}
+.flex-container1 .content button,.oppertunities .content button, .covenience-stores .content button, .get-grocery .content button{
+    font-family: myFont3;
+    font-size: 16px;
+    background-color:#eb1700ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    display: block;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dashpass-bgcolor{
+    background-color: rgb(254, 241, 238);
+    width: 100%;
+    padding-top: 60px;
+    margin-top: -60px;
+}
+.dashpass .content, .oppertunities .content{
+    align-self: center;
+    width: 20%;
+}
+
+/* get-grocery */
+
+.grocery-container{
+    background: url(https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/grocery_desktop.png) center center / cover;
+    position: relative;
+    height: 600px;
+    width: 100%;
+    /* width: 1290px; */
+}
+.get-grocery{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* width: 1290px; */
+    /* margin: 0 auto; */
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.6);
+    height: 600px;
+    width: 100%;
+    overflow-x: hidden;
+}
+.get-grocery .content{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    /* width: 30%; */
+    /* height: 600px; */
+    /* right: 30%; */
+    width: 550px;
+    margin-left: 35%;
+    top: 28%;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+.get-grocery .content a{
+    text-decoration: none;
+}
+.get-grocery .content h1{
+    color: white;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
+}
+.get-grocery .content h4{
+    color: white;
+}
+.get-grocery .content p{
+    color: white;
+    margin-bottom: 28px;
+}
+/* covenience-stores */
+.covenience-stores{
+    display: flex;
+    width: 100%;
+    margin: 60px auto 100px;
+    justify-content: center;
+    gap: 50px;
+}
+.covenience-stores img{
+    width: 700px;
+}
+.covenience-stores .image-container{
+    max-width: 60%;
+    overflow-x: hidden;
+}
+.covenience-stores .content{
+    width: 22%;
+    align-self: center;
+}
+
+/* todos-n-gifting grid */
+.todos-n-gifting{
+    background-color: rgb(254, 241, 238);
+    /* margin-top: -110px; */
+    padding-bottom: 20px;
+}
+.todos-n-gifting .content-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: 600px; */
+    gap: 40px;
+    width: 1184px;
+    align-items: center;
+    margin: 0 auto;
+    overflow-x: hidden;
+    text-align: center;
+    /* height: 210%; */
+    /* box-sizing: border-box; */
+}
+.todos-n-gifting .content-all .card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 88%;
+    /* height: 100%; */
+    box-sizing: border-box;
+}
+.todos-n-gifting .content-all img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.todos-n-gifting .content-all .image-container{
+    height: 70%;
+    /* padding-top: -100px; */
+}
+.todos-n-gifting .content-all .content{
+    height: 15%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.todos-n-gifting h2{
+    color: #191919ff;
+    font-family: myFont3;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+
+    padding-top: 60px;
+    margin-top: -40px;
+}
+.todos-n-gifting .content-all h1{
+    color: #191919ff;
+    font-family: myFont3;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 20px 10px;
+    padding: 0px;
+}
+.todos-n-gifting .content-all p{
+    color: #191919ff;
+    font-family: myFont4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 5px;
+    padding: 0px;
+}
+.todos-n-gifting .content-all button{
+    font-family: myFont3;
+    background-color:#eb1700ff;
+    padding: 12px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.todos-n-gifting .content-all span{
+    display: block;
+    color: #191919ff;
+    font-family: myFont4;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* opertunities flex */
+.oppertunities{
+    padding: 40px 0;
+}
+.oppertunities .row1, .oppertunities .row2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1% auto;
+    gap: 40px;
+    margin-top: 30px;
+}
+.oppertunities .image-container{
+    max-width: 60%;
+    overflow-x: hidden;
+}
+.oppertunities .image-container img{
+    width: 700px;
+}
+.row2-bg{
+    width: 100%;
+    background-color: rgb(254, 241, 238);
+    margin: 10px;
+}
+.oppertunities .row2{
+    padding-top: 80px;
+    margin-top: -50px;
+    padding-bottom: 20px;
+}
+.oppertunities .content a{
+    text-decoration: none;
+}
+.oppertunities div.h2, .neighborhood-main h2{
+    font-family: myFont3;
+    color: #191919ff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.oppertunities div.h2 span{
+    display: block;
+    max-width: 500px;
+    white-space: wrap;
+    text-align: center;
+}
+/* neighborhood */
+.neighborhood{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: minmax(50px,auto);
+    max-width: 1080px;
+    text-align: center;
+    margin: 30px auto;
+    grid-template-areas: 
+    "header1 header1 header2 header3 header3"
+    "new los tor chi hou"
+    "bro sand las sanf sea"
+    "atl que van mia sana";
+}
+
+.Top-Cities{
+    grid-area: header1;
+}
+.Top-Chains{
+    grid-area: header2;
+}
+.Top-Cuisines{
+    grid-area: header3;
+}
+.new{
+    grid-area: new;
+}
+.los{
+    grid-area: los;
+}
+.tor{
+    grid-area: tor;
+}
+.chi{
+    grid-area: chi;
+}
+.hou{
+    grid-area: hou;
+}
+.bro{
+    grid-area: bro;
+}
+.sand{
+    grid-area: sand;
+}
+.las{
+    grid-area: las;
+}
+.sanf{
+    grid-area: sanf;
+}
+.sea{
+    grid-area: sea;
+}
+.atl{
+    grid-area: atl;
+}
+.que{
+    grid-area: que;
+}
+.van{
+    grid-area: van;
+}
+.mia{
+    grid-area: mia;
+}
+.sana{
+    grid-area: sana;
+}
+.neighborhood .head{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-family: myFont3;
+    color:#191919ff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.neighborhood .r1{
+    padding-top: 15px;
+}
+.neighborhood .head.font2{
+    color:rgb(95, 95, 95);
+}
+.neighborhood .ele:hover{
+    background-color: rgb(247, 247, 247);
+}
+.neighborhood .head:first-child{
+    border-bottom: 3px solid rgb(41, 41, 42);
+    font-weight: bold;
+}
+.neighborhood .head:focus{
+    border-bottom: 3px solid rgb(41, 41, 42);
+}
+.neighborhood .head{
+    border-bottom: 2px solid rgb(236, 227, 227);
+}
+.neighborhood .head button:focus{
+    text-decoration: bold;
+}
+.neighborhood .ele{
+    align-self: center;
+    padding: 10px;
+    color: #191919ff;
+    font-family: myFont4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+}
+.neighborhood-main h2{
+    margin: 20px 0;
+}
+
+
+.main-footer{
+    width: 100vw;
+    background-color: #191919ff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.main-footerl{
+    width: 1184px;
+}
+.main-footerh{
+    max-width: 1160px;
+    padding: 0 calc(var(--usage-space-xx-small) * 5);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+/* categories */
+.categories{
+    padding-top: var(--usage-space-x-large);
+    padding-bottom: var(--usage-space-x-large);
+    flex: 1 1 0%;
+}
+.categories .div1{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: var(--usage-space-small);
+}
+.categories .div1 .group{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+}
+.categories .div1 h2{
+    color: rgb(255, 255, 255);
+    /* font-family: var(--usage-type-body-medium-default-font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    /* margin: 0px; */
+    padding: 0px;
+    margin-bottom: 8px;
+}
+.categories .div1 a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: filter 0.2s ease 0s;
+    margin-top: var(--usage-space-x-small);
+}
+.categories .div1 a span{
+    color: rgb(196, 196, 196);
+    font-family: myFont4;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+/* contact-container */
+.contact-container{
+    display: flex;
+}
+.contact-container .contact{
+    flex: 1 1 0%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 12px;
+}
+.contact-container .contact .group{
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contact .group h2, .categories h2{
+    color: rgb(255, 255, 255);
+    font-family: myFont4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin-bottom: 8px;
+    padding: 0px;
+}
+.contact-container .contact .group a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: filter 0.2s ease 0s;
+    margin-top: 8px;
+}
+.contact-container .contact .group a span{
+    color: rgb(196, 196, 196);
+    font-family: myFont4;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-container .store{
+    flex: 1 1 0%;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.contact-container .store .div4{
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.contact-container .store .div4 a{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease 0s;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 12px;
+}
+.contact-container .store .div4 a div{
+    padding: 2px 8px;
+    border-radius: 8px;
+    background-color: rgb(73, 73, 73);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.contact-container .store .div4 a div svg{
+    fill: white;
+}
+/* footer */
+footer{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: var(--usage-space-x-large) 0;
+}
+footer .left-foot{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 100%;
+    align-items: center;
+}
+footer .left-foot a{
+    text-decoration: inherit;
+    cursor: pointer;
+}
+footer .left-foot a div{
+    max-width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+footer .left-foot a div svg{
+    fill: white;
+}
+footer .left-foot a div span.doordash-name{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+footer .left-foot span.type1, footer .left-foot span.type2{
+    color: rgb(196, 196, 196);
+    font-family: myFont4;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.01px;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin-left: 16px !important;
+    padding: 0px;
+}
+footer .middle-foot{
+    padding: 0px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+footer .middle-foot .div6{
+    width: 150px;
+    min-height: 32px;
+    max-width: 100%;
+    font-family: myFont4;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    font-weight: 500;
+    color: #191919ff;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 16px;
+    z-index: 1;
+    padding: 0px 15px;
+    border: none;
+    box-shadow: inset 0 0 0 1px #f1f1f1ff;
+    background-color: #f1f1f1ff;
+}
+footer .middle-foot .div6 .div7{
+    max-width: 100%;
+    margin-right: 8px;
+}
+.footer .middle-foot .div6 .div7 .earth{
+    display: flex;
+}
+.footer .middle-foot .div6 .div7 .earth svg{
+    flex-shrink: 0;
+}
+footer .middle-foot .div6 .div8{
+    flex-grow: 1;
+    background: inherit;
+    max-width: 100%;
+    margin: 0px auto;
+}
+footer .middle-foot .div6 .div8 .div9{
+    position: relative;
+    background: inherit;
+}
+footer .middle-foot .div6 .div8 .div9 select{
+    font-family: myFont4;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    outline: none;
+    flex: 1 1 100%;
+    display: flex;
+    background: inherit;
+    color: currentcolor;
+    appearance: none;
+    margin: 0px;
+    padding: 0px;
+}
+footer .middle-foot .div6 .div8 .div9 .drop-down-icon{
+    position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    top: 0px;
+    right: 0px;
+    height: 24px;
+    pointer-events: none;
+    background: inherit;
+}
+footer .right-foot{
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 12px;
+}
+footer .right-foot a{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease 0s;
+    text-decoration: none;
+    color: inherit;
+}
+footer .right-foot a svg{
+    flex-shrink: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1250px){
+    .todos-n-gifting .content-all{
+        width: 98%;
+        padding: 1% 1%;
+        overflow-x: visible;
+    }
+}
+@media screen and (min-width: 768px) {
+        .banner{
+            height: 650px;
+        }
+}
+@media screen and (max-width:1184px){
+
+    .services{
+        flex-direction: column;
+        margin: 6% 0;
+    }
+    .services .r1, .services .r2, .services .r3{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .services .content *{
+        text-align: left;
+    }
+    .services div.content{
+        align-items: flex-start;
+    }
+    .services div span{
+        font-size: 13px;
+    }
+    .input-container button{
+        background-color: white;
+        color: black;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    /* header */
+    .banner-content h1{
+        font-size: 1.3em;
+        width: 350px;
+        text-align: center;
+        line-height: 25px;
+        white-space: wrap;
+    }
+    .get-grocery .content h1{
+        line-height: 30px;
+    }
+    /* app-download */
+    .app-download-container{
+        display: block;
+    }
+    /* image size correction */
+    
+    .everything img, .dashpass img, .covenience-stores img, .oppertunities img{
+        object-fit: cover;
+    }
+    
+    .flex-container1 .everything{
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .flex-container1 .dashpass{
+        flex-direction: column;
+        width: 95%;
+    }
+    .flex-container1 .image-container img{
+        width: 100%;
+    }
+    /* common */
+    .flex-container1 .image-container, .flex-container1 .content{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: visible;
+    }
+    .flex-container1 img, .covenience-stores img{
+        height: 180px;
+        width: 100%;
+    }
+    .flex-container1 .content h1, .get-grocery .content h1, .covenience-stores .content h1, .todos-n-gifting h2, .todos-n-gifting .content-all h1, .oppertunities div.h2, .oppertunities .content h1{
+        font-size: 1.5em;
+    }
+    .flex-container1 .content p, .get-grocery .content p, .covenience-stores .content p, .todos-n-gifting .content-all p, .oppertunities .content p{
+        font-size: 0.85em;
+    }
+    .flex-container1 .content button, .get-grocery .content button, .covenience-stores .content button, .todos-n-gifting .content-all button, .oppertunities .content button{
+        font-size: 0.8em;
+    }
+   
+    /* get-grocery */ 
+
+    .get-grocery .content h4{
+        font-size: 1.2em;
+    }
+    .grocery-container{
+        height: 400px;
+    }
+    .get-grocery {
+        height: 400px;
+    }
+    .get-grocery .content{
+        top: 20%;
+        width: 70%;
+        margin-left: 10%;
+    }
+    /* covenience-stores */
+
+    .covenience-stores{
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .covenience-stores .image-container, .covenience-stores .content{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: visible;
+    }
+    /* todos-n-gifting */
+    .todos-n-gifting{
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        margin-top: 10px;
+    }
+    .todos-n-gifting h2{
+        padding-top: 50px;
+    }
+    .todos-n-gifting .content-all{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 20px;
+        width: 350%;
+        gap: 10px;
+    }
+    .todos-n-gifting .content-all .card{
+        /* width: 650px; */
+        width: 100%;
+    }
+    .todos-n-gifting .content-all .image-container{
+        height: 50%;
+    }
+    .todos-n-gifting .content-all img{
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* oppertunities */
+
+    .oppertunities img{
+        height: 180px;
+    }
+    .oppertunities .row1{
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .oppertunities .row2{
+        flex-direction: column;
+        width: 95%;
+    }
+    .oppertunities .image-container img{
+        width: 100%;
+    }
+    .oppertunities .image-container, .oppertunities .content{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: visible;
+    }
+    /* neighborhood */
+    .neighborhood-main h2{
+        font-size: 16px;
+    }
+    .neighborhood{
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: minmax(50px,auto);
+
+        grid-template-areas: 
+        "header1 header2 header3"
+        "new . los"
+        "tor . chi"
+        "hou . bro"
+        "sand . las"
+        "sanf . sea"
+        "atl . que"
+        "van . mia"
+        "sana . .";
+    }
+    .neighborhood .c1{
+        text-align: right;
+    }
+    .neighborhood .c2{
+        text-align: left;
+    }
+    .neighborhood .ele{
+        padding: 2px;
+        margin: 0;
+    }
+    
+}
+
+ @media screen and (max-width:960px){
+    header.static .svgs #logo{
+        height: 18px;
+    }
+    header.static .svgs #brand{
+        height: 14px;
+        width: 120px;
+    }
+    header.static .svgs{
+        margin-top: 20px;
+        padding-left: 0;
+    }
+    .banner-content .address{
+        display: none;
+    }
+    .banner-content .address2-inplace{
+        display: block;
+    }
+    /* main-footer */
+
+    .contact-container{
+        flex-direction: column-reverse;
+    }
+    .contact-container .store{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:767px){
+    header.static .button-group{
+        display: none;
+    }
+    header.static .button-group-inplace{
+        display: flex;
+    }
+    header.static .svgs {
+        margin-top: 175px;
+        white-space: nowrap;
+    }
+    .input-container .location-logo{
+        display: none;
+    }
+    .input-container .search-logo{
+        display: block;
+    }
+    .input-container{
+        width: 300px;
+        padding: 5px;
+    }
+    .input-container input{
+        width: 220px;
+    }
+    .banner-content{
+        align-items: center;
+        padding-top: 220px;
+    }
+    .services .image img{
+        height: 100px;
+    }
+    /* main-footer */
+    .categories .div1 {
+        flex-direction: column;
+    }
+    .categories{
+        text-align: center;
+    }
+    .contact-container .contact{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer{
+        flex-direction: column-reverse;
+    }
+    footer .middle-foot .div6{
+        width: auto;
+    }
+    footer .middle-foot {
+        margin: 10px 0;
+    }
+    footer .left-foot{
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width:560px){
+    /* header.static .button-group-inplace{
+        margin-right: 12%;
+    } */
+    header.static .button-group-inplace button{
+        font-size: 15px;
+    } 
+}
+/* @media screen and (max-width:425px){
+
+} */
+/*
+@media screen and (max-width:375px){
+    
+}
+@media screen and (max-width:320px){
+    
+} */
+/*  */
